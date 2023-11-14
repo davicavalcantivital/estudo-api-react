@@ -7,15 +7,17 @@ export default function ListaChamada() {
         <header className='cabecalho'>
           <h1>React_API.my</h1>
         </header>
-        <section>
-          <h4>Lista de chamada</h4>
+        <section className='sec-1'>
+          <div>
+            <h4>Lista de chamada</h4>
+          </div>
           <hr/>
           <nav>
             <label>Pesquisar Aluno</label>
             <input type='text'/>
           </nav>
           <hr/>
-          <table>
+          <table className='sec1-tabela'>
             <thead>
               <tr>
                 <th>Número</th>
