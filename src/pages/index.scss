@@ -1,0 +1,33 @@
+.index-lista-chamada {
+    height: 100vh;
+    overflow-x: hidden;
+
+    hr {
+        border-style: none;
+        height: 3px;
+        background-color: #000;
+    }
+
+    select:focus, input:focus {
+        outline: none;
+    }
+
+    .fundo {
+        height: 100%;
+        width: 100%;
+        background-color: #ebebeb;
+    }
+
+    .cabecalho {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 10px;
+        background-color: #fff;
+    }
+
+    
+
+
+
+};
