@@ -1,6 +1,6 @@
 import { Router } from "express";
 const sv = Router();
-import { listarAlunos, darPresenca } from "../repository/alunoRepository.js";
+import { listarAlunos, darPresenca, listarAlunosPorNome } from "../repository/alunoRepository.js";
 
 sv.get(('/aluno'), async (req, resp) => {
     try {
@@ -11,7 +11,17 @@ sv.get(('/aluno'), async (req, resp) => {
     }
 })
 
-// /aluno/1?presenca=false
+sv.get(('/aluno'), async (req, resp) => {
+    try {
+        const query = req.query.nome;
+        const respo = await listarAlunosPorNome(query);
+        resp.send(respo);
+    } catch (err) {
+        resp.status(404).send({erro: err.message})
+    }
+})
+
+// /aluno/1?presenca=false/0
 sv.put(('/aluno/:id'), async (req, resp) => {
     try {
         const params = req.params.id;

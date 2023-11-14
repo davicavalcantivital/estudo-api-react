@@ -1,6 +1,8 @@
 import './index.scss';
-
+// import { CarregarAlunos, PesquisarAluno, DarPresenca } from '../api/alunoAPI';
 export default function ListaChamada() {
+
+
   return (
     <main className='index-lista-chamada'>
       <section className='fundo'>
